@@ -1,14 +1,15 @@
 from flask import Flask, render_template, session, request, redirect, url_for
 from msal import ConfidentialClientApplication
+import requests
 import os
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 # Azure AD configuration
-CLIENT_ID = 'your-client-id'
-CLIENT_SECRET = 'your-client-secret'
-AUTHORITY = 'https://login.microsoftonline.com/your-tenant-id'
+CLIENT_ID = '653834f9-16e7-4e41-8839-529e903f1911'
+CLIENT_SECRET = 'UDB8Q~SWM_4oIXkLdWjz_n0vSTirAcngZsIwBbog'
+AUTHORITY = 'https://login.microsoftonline.com/04c24e67-e995-4780-8c97-288bab5f8eee'
 SCOPE = ["openid", "profile", "User.Read"]
 
 # Routes
